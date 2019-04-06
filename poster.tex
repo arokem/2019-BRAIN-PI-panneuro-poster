@@ -1,0 +1,155 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% a0poster Landscape Poster
+% LaTeX Template
+% Version 1.0 (22/06/13)
+%
+% The a0poster class was created by:
+% Gerlinde Kettl and Matthias Weiser (tex@kettl.de)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-------------------------------------------------------------------------------
+
+\documentclass[a0, landscape]{a0poster}
+
+\usepackage{multicol} % This is so we can have multiple columns of text side-by-side
+\columnsep=100pt % This is the amount of white space between the columns in the poster
+\columnseprule=3pt % This is the thickness of the black line between the columns in the poster
+
+\usepackage[svgnames]{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
+
+%\usepackage{times} % Use the times font
+\usepackage{palatino} % Uncomment to use the Palatino font
+\usepackage{graphicx} % Required for including images
+\graphicspath{{figures/}} % Location of the graphics files
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{wrapfig} % Allows wrapping text around tables and figures
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  %frame=tb,
+  language=Python,
+  aboveskip=2mm,
+  belowskip=0mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+  framexleftmargin=15pt
+  }
+
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	POSTER HEADER
+%----------------------------------------------------------------------------------------
+
+% The header is divided into three boxes:
+% The first is 55% wide and houses the title, subtitle, names and university/organization
+% The second is 25% wide and houses contact information
+% The third is 19% wide and houses a logo for your university/organization or a photo of you
+% The widths of these boxes can be easily edited to accommodate your content as you see fit
+
+\begin{minipage}[b]{0.85\linewidth}
+\veryHuge \color{NavyBlue} \textbf{PanNeuro: leveraging a community-based approach for big data neuroscience } \color{Black}\\ % Title
+%\Huge\textit{An Exploration of Complexity}\\[1cm] % Subtitle
+\huge \textbf{Ariel Rokem\textsuperscript{1,2}, Joe Hamman \textsuperscript{3}, Ryan Abernathy \textsuperscript{4} \&  \textsuperscript{5}}\\ % Author(s)
+\Large 1. The eScience Institute, 2. Computational Neuroscience Center 4. Dept. of Physiology and Biophsyics, Univ. of Washington \\
+3. NCAR, 4. Columbia University % University/organization
+\Large Contact: \texttt{arokem@uw.edu} $|$ Download: \texttt{http://arokem.org/presentations/brainpi-panneuro-2019}
+\end{minipage}
+
+\begin{minipage}[b]{0.19\linewidth}
+\includegraphics[width=10cm]{UWlogo.png}
+\end{minipage}
+
+\vspace{0.5cm} % A bit of extra whitespace between the header and poster content
+
+%----------------------------------------------------------------------------------------
+
+\begin{multicols}{3} % This is how many columns your poster will be broken into, a poster with many figures may benefit from less columns whereas a text-heavy poster benefits from more
+
+%----------------------------------------------------------------------------%	Introduction
+%----------------------------------------------------------------------------
+
+\section*{Introduction}
+
+
+
+\vfill
+\columnbreak
+
+%----------------------------------------------------------------------------%
+%----------------------------------------------------------------------------
+\color{Navy}
+
+\section*{Cloud computing}
+
+\vfill
+\columnbreak
+
+\section*{Results}
+
+%----------------------------------------------------------------------------
+%	MATERIALS AND METHODS
+%----------------------------------------------------------------------------
+
+\color{SaddleBrown} % SaddleBrown color for the conclusions to make them stand out
+\section*{Conclusions}
+\large
+\begin{itemize}
+
+\item Conclusion, the first
+
+\item Conclusion, the second
+
+\item Conclusion, the third
+
+\end{itemize}
+
+\color{DarkSlateGray} % Set the color back to DarkSlateGray for the rest of the content
+
+%---------------------------------------------------------------------------	REFERENCES
+%----------------------------------------------------------------------------
+
+\nocite{*} % Print all references regardless of whether they were cited in the poster or not
+\bibliographystyle{plain} % Plain referencing style
+\footnotesize \bibliography{poster} % Use the example bibliography file sample.bib
+
+%----------------------------------------------------------------------------%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------
+\subsection*{Acknowledgements} \footnotesize
+
+
+\includegraphics[height=2.6cm]{NIBIB.png}\\
+\includegraphics[height=2.6cm]{SloanLogo.png}
+\includegraphics[height=2.6cm]{MooreFdn.png}
+\includegraphics[height=2.6cm]{eSciencelogo.png}
+%----------------------------------------------------------------------------
+
+\end{multicols}
+\end{document}
